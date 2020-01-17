@@ -13,13 +13,13 @@ class MapTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let defaults = UserDefaults.standard
-        let dictionary = defaults.dictionaryRepresentation()
-        dictionary.keys.forEach { key in
-            defaults.removeObject(forKey: key)
-        }
-       
-        }
+//        let defaults = UserDefaults.standard
+//        let dictionary = defaults.dictionaryRepresentation()
+//        dictionary.keys.forEach { key in
+//            defaults.removeObject(forKey: key)
+//        }
+//
+}
     
 
     override func viewWillAppear(_ animated: Bool) {
