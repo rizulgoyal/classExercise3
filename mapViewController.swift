@@ -16,6 +16,9 @@ class mapViewController: UIViewController {
     var locationLat : [Double] = []
     var locationLong : [Double] = []
     var locationAddress : [String] = []
+    var locationarray = [MKAnnotation]()
+    
+
 
 
 
@@ -65,9 +68,24 @@ class mapViewController: UIViewController {
             let templongitude = defaults.array(forKey: "locationlong") as? [Double] ?? [Double]()
             let tempaddress = defaults.stringArray(forKey: "locationaddress") ?? [String]()
 
+            
             locationLat = templatitude
             locationLong = templongitude
             locationAddress = tempaddress
+            
+            for i in 0..<locationLat.count
+            {
+                let coordinate = CLLocationCoordinate2D(latitude: locationLat[i], longitude: locationLong[i])
+                let annotation = MKPointAnnotation()
+                annotation.coordinate = coordinate
+                locationarray.append(annotation)
+            }
+            
+                    
+            mapView1.addAnnotations(locationarray)
+
+            
+            
             
         }
         

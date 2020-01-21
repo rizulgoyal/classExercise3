@@ -14,6 +14,7 @@
 		E0B6B98723CE3FB800922859 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B6B98523CE3FB800922859 /* LaunchScreen.storyboard */; };
 		E0F21B7223CE4DFB00489FC2 /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F21B7123CE4DFB00489FC2 /* mapViewController.swift */; };
 		E0F21C0523D20C7000489FC2 /* MapTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F21C0423D20C7000489FC2 /* MapTableViewController.swift */; };
+		E0F21CAE23D7C41500489FC2 /* mapSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F21CAD23D7C41500489FC2 /* mapSelectViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E0B6B98823CE3FB800922859 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0F21B7123CE4DFB00489FC2 /* mapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = mapViewController.swift; path = ../mapViewController.swift; sourceTree = "<group>"; };
 		E0F21C0423D20C7000489FC2 /* MapTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTableViewController.swift; sourceTree = "<group>"; };
+		E0F21CAD23D7C41500489FC2 /* mapSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapSelectViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				E0F21B7123CE4DFB00489FC2 /* mapViewController.swift */,
 				E0B6B98523CE3FB800922859 /* LaunchScreen.storyboard */,
 				E0B6B98823CE3FB800922859 /* Info.plist */,
+				E0F21CAD23D7C41500489FC2 /* mapSelectViewController.swift */,
 			);
 			path = classExercise3;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0F21CAE23D7C41500489FC2 /* mapSelectViewController.swift in Sources */,
 				E0B6B97B23CE3FB300922859 /* AppDelegate.swift in Sources */,
 				E0B6B97D23CE3FB400922859 /* SceneDelegate.swift in Sources */,
 				E0F21C0523D20C7000489FC2 /* MapTableViewController.swift in Sources */,

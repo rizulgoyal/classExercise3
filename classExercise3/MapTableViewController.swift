@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import  CoreLocation
+import MapKit
 
 class MapTableViewController: UITableViewController {
 
@@ -50,6 +52,8 @@ class MapTableViewController: UITableViewController {
         }
         return 0
     }
+    
+    
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -85,6 +89,7 @@ class MapTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         let defaults = UserDefaults.standard
            let templat = defaults.array(forKey: "locationlat") as? [Double] ?? [Double]()
         let templong = defaults.array(forKey: "locationlong") as? [Double] ?? [Double]()
@@ -95,8 +100,25 @@ class MapTableViewController: UITableViewController {
         let currlong =  templong[indexPath.row]
         let curraddress = tempaddress[indexPath.row]
         
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+               
+                     let newVC = sb.instantiateViewController(identifier: "mapVC") as! mapSelectViewController
+        
+        let coordinate = CLLocationCoordinate2D(latitude: currlat, longitude: currlong)
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = coordinate
+        
+        newVC.annotation = annotation
+        newVC.address = curraddress
+        
+        
+               
+                     
+                     navigationController?.pushViewController(newVC, animated: true)
+           }
+        
 
-    }
+    
     
 
     /*
