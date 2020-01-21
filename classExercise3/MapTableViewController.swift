@@ -84,6 +84,20 @@ class MapTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let defaults = UserDefaults.standard
+           let templat = defaults.array(forKey: "locationlat") as? [Double] ?? [Double]()
+        let templong = defaults.array(forKey: "locationlong") as? [Double] ?? [Double]()
+        let tempaddress = defaults.stringArray(forKey: "locationaddress") ?? [String]()
+        
+        
+        let currlat =  templat[indexPath.row]
+        let currlong =  templong[indexPath.row]
+        let curraddress = tempaddress[indexPath.row]
+        
+
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.

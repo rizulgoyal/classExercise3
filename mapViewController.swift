@@ -13,9 +13,9 @@ class mapViewController: UIViewController {
 
     @IBOutlet var mapView1: MKMapView!
     //@IBOutlet var mapView: MKMapView!
-    var locationLat = [Double]()
-    var locationLong = [Double]()
-    var locationAddress = [String]()
+    var locationLat : [Double] = []
+    var locationLong : [Double] = []
+    var locationAddress : [String] = []
 
 
 
@@ -60,8 +60,14 @@ class mapViewController: UIViewController {
             
             mapView1.addGestureRecognizer(uiLogr)
             
+            let defaults = UserDefaults.standard
+            let templatitude = defaults.array(forKey: "locationlat") as? [Double] ?? [Double]()
+            let templongitude = defaults.array(forKey: "locationlong") as? [Double] ?? [Double]()
+            let tempaddress = defaults.stringArray(forKey: "locationaddress") ?? [String]()
 
-            
+            locationLat = templatitude
+            locationLong = templongitude
+            locationAddress = tempaddress
             
         }
         
@@ -100,7 +106,8 @@ class mapViewController: UIViewController {
                 let defaults = UserDefaults.standard
                 defaults.set(locationLat, forKey: "locationlat")
                 defaults.set(locationLong, forKey: "locationlong")
-
+            defaults.synchronize()
+            
 //                for i in locations
 //                {
 //                    print(String(i.latitude) + "\n" + String(i.longitude))
@@ -143,8 +150,9 @@ class mapViewController: UIViewController {
                       
                       print(address)
                         self.locationAddress.append(address)
-                        
+                        print(self.locationAddress.count)
                         defaults.set(self.locationAddress, forKey: "locationaddress")
+                        defaults.synchronize()
 
                         
                   }
