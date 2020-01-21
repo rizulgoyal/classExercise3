@@ -10,7 +10,7 @@
         <!--Map Select View Controller-->
         <scene sceneID="byQ-AR-TKI">
             <objects>
-                <viewController id="Pq3-FL-QUf" customClass="mapSelectViewController" customModule="classExercise3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mapVC" id="Pq3-FL-QUf" customClass="mapSelectViewController" customModule="classExercise3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IME-TI-Oes">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,6 +23,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="IiP-Ak-ptK"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView1" destination="30U-mC-wmT" id="JVn-kQ-jAn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4yF-z2-43W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

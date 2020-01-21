@@ -12,17 +12,18 @@ import CoreLocation
 
 class mapSelectViewController: UIViewController {
     
+    @IBOutlet var mapView1: MKMapView!
     var address : String?
-    var annotation : MKAnnotation?
+    var annotation : MKPointAnnotation?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //        let annotation = MKPointAnnotation()
-           //        annotation.title = "Toronto"
-           //        annotation.subtitle = "Lets take the tour"
-           //        annotation.coordinate = location
-           //        mapView.addAnnotation(annotation)
+        
+        annotation!.title = "My Location"
+        annotation!.subtitle = address
+        
+                   mapView1.addAnnotation(annotation!)
 
         // Do any additional setup after loading the view.
     }
